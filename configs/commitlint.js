@@ -1,6 +1,6 @@
 /**
  * CommitLint config options object
- * @typedef {Object} ESlintOptions
+ * @typedef {Object} CommitlintOptions
  * @property {RegExp} subjectRegExp - subject RegExp
  * @property {RegExp} scopeRegExp - scope RegExp
 */
