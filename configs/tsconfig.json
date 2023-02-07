@@ -1,0 +1,45 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@*": [
+                "src/*"
+            ]
+        },
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+
+        "noEmit": false,
+        "outDir": "dist",
+        "sourceMap": true,
+
+        "allowJs": true,
+
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+
+        "jsx": "react",
+        "target": "es5",
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "experimentalDecorators": true,
+
+        "strict": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "plugins": [
+            {
+                "name": "typescript-plugin-css-modules",
+                "options": {
+                    "classnameTransform": "camelCaseOnly",
+                    "customMatcher": "\\.s?css$",
+                    "goToDefinition": true
+                }
+            }
+        ]
+    }
+}

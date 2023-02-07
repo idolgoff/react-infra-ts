@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@*": [
+                "src/*"
+            ],
+            "*": [
+                "src/*"
+            ]
+        },
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+
+        "noEmit": false,
+        "outDir": "lib",
+        "sourceMap": true,
+        "declaration": true,
+
+        "allowJs": true,
+
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+
+        "jsx": "react",
+        "target": "es5",
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "experimentalDecorators": true,
+
+        "strict": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true
+    }
+}
