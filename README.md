@@ -22,9 +22,80 @@ npm install react-infra
 
 After installation, you can use the modules and configurations included in the package to set up a React application.
 
+## How to use
+
+### Webpack
+
+You can use predefined webpack config or extend it with your own
+
+Create a ```webpack.config.js``` file with followed
+
+```javascript
+const { configs } = require('react-infra');
+
+module.exports = (env) => configs.webpack(env);
+```
+
+or
+
+```javascript
+const { configs } = require('react-infra');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = (env) => {
+    const infraConfig = configs.webpack(env);
+    const resultConfig = {
+        ...infraConfig,
+        plugins: [
+            // predefined config rules
+            ...infraConfig.plugins,
+
+            // extend with own plugins using spread syntax
+            new HtmlWebpackPlugin({
+                template: 'src/index.html',
+
+                // setting environment
+                // with included DotEnv package
+                BUILD_MODE: process.env.BUILD_MODE,
+            }),
+        ]
+    }
+
+    return resultConfig;
+};
+```
+
+### TS config
+
+Create `tsconfig.json` file as below:
+
+```json
+{
+    "extends": "react-infra-ts/configs/tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": "./",
+        "rootDir": ".",
+        "outDir": "dist"
+    }
+}
+```
+
+You have to specify baseUrl, rootDir and outDir here which comes relative to the default configuration file
+
+### ESlint
+
+You can use predefined eslint config or extend it with your own options using spread syntax. Create `.eslintrc.js` file with the followed content:
+
+```javascript
+const { configs } = require('react-infra');
+
+module.exports = configs.eslint();
+```
+
 ## Used Modules 
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [DotEnv](https://www.npmjs.com/package/dotenv/)
 - [Jest](https://jestjs.io/)
 - [Stylelint](https://stylelint.io/)
 - [ESLint](https://eslint.org/)
