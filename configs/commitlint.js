@@ -1,4 +1,10 @@
-module.exports = (options = {}) => ({
+/**
+ * CommitLint config options object
+ * @typedef {Object} ESlintOptions
+ * @property {RegExp} subjectRegExp - subject RegExp
+ * @property {RegExp} scopeRegExp - scope RegExp
+*/
+module.exports = ({ scopeRegExp, subjectRegExp } = {}) => ({
     extends: ["@commitlint/config-conventional"],
     plugins: ['commitlint-plugin-function-rules'],
     rules: {
@@ -10,13 +16,11 @@ module.exports = (options = {}) => ({
             'always',
             ({ type, scope, subject }) => {
 
-                const subjectReg = /^(:\w+:\s)?[ЁА-ЯA-Z].*/
-                if (subject && !subject.match(subjectReg))
-                    return [false, `subject must be sentence-case`];
+                if (!!subjectRegExp && subject && !subject.match(subjectRegExp))
+                    return [false, `subject must be ${subjectRegExp} case`];
 
-                const scopeReg = /LKB2B-(\d+)/;
-                if (scope && !scope.match(scopeReg))
-                    return [false, `scope must match ${scopeReg} regexp`];
+                if (!!scopeRegExp && scope && !scope.match(scopeRegExp))
+                    return [false, `scope must match ${scopeRegExp} regexp`];
 
                 if (['feat', 'fix'].includes(type) && !scope)
                     return [false, `scope must be provided for type ${type}`];
