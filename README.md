@@ -2,9 +2,9 @@
 
 A comprehensive React infrastructure package for big-sized enterprise level applications, including all necessary modules and their configurations for React, TypeScript, Jest, Stylelint, ESLint, and Commitlint. 
 
-[![NPM](https://img.shields.io/npm/v/react-infra.svg)](https://www.npmjs.com/package/react-infra)
+[![NPM](https://img.shields.io/npm/v/react-infra-ts.svg)](https://www.npmjs.com/package/react-infra-ts)
 [![Build Status](https://travis-ci.org/your-username/react-infra.svg?branch=master)](https://travis-ci.org/your-username/react-infra)
-[![License](https://img.shields.io/npm/l/react-infra.svg)](https://github.com/your-username/react-infra/blob/master/LICENSE)
+[![License](https://img.shields.io/npm/l/react-infra-ts.svg)](https://github.com/your-username/react-infra/blob/master/LICENSE)
 
 ## Key Features
 - Robust React setup 
