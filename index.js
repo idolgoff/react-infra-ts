@@ -1,6 +1,5 @@
 /**
- * LKB2B Infra module
- * @module @lkb2b/infra
+ * @module react-infra-ts
  */
 
 const stylelintConfig = require('./configs/stylelint');
