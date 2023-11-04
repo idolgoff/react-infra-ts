@@ -77,7 +77,7 @@
     "webpack-dev-server": "^4.9.3",
     "webpack-merge": "^5.8.0"
   },
-  "devDependencies": {
+  "dependencies": {
     "gently-copy": "^3.2.0"
   }
 }
