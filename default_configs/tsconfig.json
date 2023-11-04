@@ -1,0 +1,9 @@
+{
+    "extends": "react-infra-ts/configs/tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": "./",
+        "rootDir": ".",
+        "module": "commonjs",
+        "outDir": "dist"
+    }
+}
