@@ -1,16 +1,17 @@
 # React Infra - The Ultimate React Infrastructure Package
 
-A comprehensive React infrastructure package for big-sized enterprise level applications, including all necessary modules and their configurations for React, TypeScript, Jest, Stylelint, ESLint, and Commitlint. 
+A comprehensive React infrastructure package for big-sized enterprise level applications, including all necessary modules and their configurations for React, TypeScript, Jest, Stylelint, ESLint, and Commitlint.
 
 [![NPM](https://img.shields.io/npm/v/react-infra-ts.svg)](https://www.npmjs.com/package/react-infra-ts)
 [![License](https://img.shields.io/npm/l/react-infra-ts.svg)](https://github.com/idolgoff/react-infra-ts/blob/master/LICENSE)
 
 ## Key Features
-- Robust React setup 
-- TypeScript integration 
-- Jest testing framework 
-- Stylelint and ESLint for code linting 
-- Commitlint for enforcing a conventional commit style 
+
+- Robust React setup
+- TypeScript integration
+- Jest testing framework
+- Stylelint and ESLint for code linting
+- Commitlint for enforcing a conventional commit style
 
 ## Quick Start
 
@@ -65,6 +66,15 @@ module.exports = (env) => {
 };
 ```
 
+Then add the following scripts into package.json to start development
+
+```bash
+    ...
+    "start": "webpack serve --env env=development",
+    "build": "webpack --env env=production",
+    ...
+```
+
 ### TS config
 
 Create `tsconfig.json` file as below:
@@ -92,7 +102,8 @@ const { configs } = require('react-infra');
 module.exports = configs.eslint();
 ```
 
-## Used Modules 
+## Used Modules
+
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [DotEnv](https://www.npmjs.com/package/dotenv/)
