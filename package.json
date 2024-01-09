@@ -1,6 +1,6 @@
 {
   "name": "react-infra-ts",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Shared configs for webpack, typescript, eslint, stylelint, commitlint",
   "main": "index.js",
   "scripts": {
